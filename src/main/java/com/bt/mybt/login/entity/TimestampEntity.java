@@ -3,7 +3,6 @@ package com.bt.mybt.login.entity;
 
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity(name = "timestamp")
@@ -64,5 +63,16 @@ public class TimestampEntity {
     public TimestampEntity setDate(LocalDateTime date) {
         this.date = date;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "TimestampEntity{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", locale='" + locale + '\'' +
+                ", date=" + date +
+                ", os='" + os + '\'' +
+                '}';
     }
 }

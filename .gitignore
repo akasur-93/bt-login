@@ -3,3 +3,4 @@ target/*
 login.iml
 .idea/
 .DS_Store
+*.xlsx
