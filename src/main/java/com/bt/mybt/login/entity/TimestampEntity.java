@@ -19,6 +19,17 @@ public class TimestampEntity {
     private String locale;
     @Column
     private LocalDateTime date;
+    @Column
+    private String os;
+
+    public String getOs() {
+        return os;
+    }
+
+    public TimestampEntity setOs(String os) {
+        this.os = os;
+        return this;
+    }
 
     public int getId() {
         return id;

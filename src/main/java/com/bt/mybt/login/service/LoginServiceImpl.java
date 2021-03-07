@@ -25,7 +25,7 @@ public class LoginServiceImpl implements LoginService {
 
         if (loginEntity.getPassword().equals(password)) {
             TimestampEntity timestamp = new TimestampEntity();
-            timestamp = timestamp.setLocale(Locale.getDefault().toString()).setDate(LocalDateTime.now()).setUsername(username);
+            timestamp = timestamp.setLocale(Locale.getDefault().toString()).setDate(LocalDateTime.now()).setUsername(username).setOs(System.getProperty("os.name"));
             timestampRepo.save(timestamp);
             return true;
         }
